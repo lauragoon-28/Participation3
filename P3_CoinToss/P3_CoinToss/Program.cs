@@ -14,7 +14,6 @@ namespace P3_CoinToss
             Random rand = new Random();
             int randomNumber = rand.Next(1, 3);// generate a random number between 1 and 2
             int guess = 0;
-            int coin = 0;
             
             Console.WriteLine(randomNumber);
 
@@ -28,23 +27,22 @@ namespace P3_CoinToss
             }
             if (randomNumber == 1)
             {
-                coin = 1;
                 Console.WriteLine("The answer is heads!");
             }
             else if ( randomNumber == 2)
             {
-                coin = 2;
                 Console.WriteLine("The answer is tails!");
             }
-            if (guess == coin)
+            if (guess == randomNumber)
             {
                 Console.WriteLine("You've guessed correctly!");
             }
             else
             {
-                Console.WriteLine("YOu've guessed incorrectly!");
+                Console.WriteLine("You've guessed incorrectly!");
             }
-            string num = Convert.ToString(randomNumber);
+            string developerName = "Laura Goon";
+            Console.WriteLine(developerName);
 
         }
     }
