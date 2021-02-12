@@ -11,26 +11,41 @@ namespace P3_CoinToss
             Console.WriteLine("Heads or Tails?");
             string answer = Console.ReadLine();
 
-            // ask the user for heads or tails
-
             Random rand = new Random();
             int randomNumber = rand.Next(1, 3);// generate a random number between 1 and 2
+            int guess = 0;
+            int coin = 0;
+            
             Console.WriteLine(randomNumber);
-            // generate random number (done above)
 
-            if (randomNumber == 1);
+            if(answer == "heads")
             {
+                guess = 1;
+            }
+            else if (answer == "tails") 
+            {
+                guess = 2;
+            }
+            if (randomNumber == 1)
+            {
+                coin = 1;
                 Console.WriteLine("The answer is heads!");
+            }
+            else if ( randomNumber == 2)
+            {
+                coin = 2;
+                Console.WriteLine("The answer is tails!");
+            }
+            if (guess == coin)
+            {
+                Console.WriteLine("You've guessed correctly!");
             }
             else
             {
-                Console.WriteLine("The answer is tails!");
+                Console.WriteLine("YOu've guessed incorrectly!");
             }
-            string Heads = Convert.ToString(randomNumber);
-            // convert either the user's answer to an int or our random number to a string
+            string num = Convert.ToString(randomNumber);
 
-
-            //see if they guessed right with the newly converted value 
         }
     }
 }
